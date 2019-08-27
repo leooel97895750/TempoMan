@@ -1,0 +1,110 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+# Date created = 13:04:21  January 03, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		patapon_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C5E144C7
+set_global_assignment -name TOP_LEVEL_ENTITY patapon
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:04:21  JANUARY 03, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name VERILOG_FILE patapon.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_22 -to clk
+set_location_assignment PIN_128 -to comm[0]
+set_location_assignment PIN_129 -to comm[1]
+set_location_assignment PIN_132 -to comm[2]
+set_location_assignment PIN_135 -to ledb[0]
+set_location_assignment PIN_136 -to ledb[1]
+set_location_assignment PIN_137 -to ledb[2]
+set_location_assignment PIN_138 -to ledb[3]
+set_location_assignment PIN_141 -to ledb[4]
+set_location_assignment PIN_142 -to ledb[5]
+set_location_assignment PIN_143 -to ledb[6]
+set_location_assignment PIN_144 -to ledb[7]
+set_location_assignment PIN_72 -to ledg[0]
+set_location_assignment PIN_73 -to ledg[1]
+set_location_assignment PIN_74 -to ledg[2]
+set_location_assignment PIN_75 -to ledg[3]
+set_location_assignment PIN_76 -to ledg[4]
+set_location_assignment PIN_77 -to ledg[5]
+set_location_assignment PIN_79 -to ledg[6]
+set_location_assignment PIN_80 -to ledg[7]
+set_location_assignment PIN_64 -to ledr[0]
+set_location_assignment PIN_65 -to ledr[1]
+set_location_assignment PIN_66 -to ledr[2]
+set_location_assignment PIN_67 -to ledr[3]
+set_location_assignment PIN_68 -to ledr[4]
+set_location_assignment PIN_69 -to ledr[5]
+set_location_assignment PIN_70 -to ledr[6]
+set_location_assignment PIN_71 -to ledr[7]
+set_location_assignment PIN_127 -to beep
+set_location_assignment PIN_133 -to enable
+set_location_assignment PIN_99 -to buttonB
+set_location_assignment PIN_100 -to buttonC
+set_location_assignment PIN_103 -to buttonD
+set_location_assignment PIN_98 -to buttonA
+set_location_assignment PIN_43 -to testC[1]
+set_location_assignment PIN_44 -to testC[2]
+set_location_assignment PIN_46 -to testD[0]
+set_location_assignment PIN_49 -to testD[1]
+set_location_assignment PIN_50 -to testD[2]
+set_location_assignment PIN_42 -to testC[0]
+set_location_assignment PIN_31 -to bloodled[1]
+set_location_assignment PIN_32 -to bloodled[2]
+set_location_assignment PIN_33 -to bloodled[3]
+set_location_assignment PIN_34 -to bloodled[4]
+set_location_assignment PIN_30 -to bloodled[0]
+set_location_assignment PIN_51 -to a
+set_location_assignment PIN_53 -to c
+set_location_assignment PIN_54 -to d
+set_location_assignment PIN_55 -to e
+set_location_assignment PIN_58 -to f
+set_location_assignment PIN_52 -to b
+set_location_assignment PIN_59 -to g
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,73 @@
+module patapon(input clk,
+               input A,B,C,D
+					output [7:0] ledr,ledg,ledb
+					output [3:0] comm);
+freq1 F1(clk, clk1);
+freq1000 F1000(clk, clk1000);
+reg changefor1;
+byte cnt;
+parameter logic [7:0] rhy [7:0] = '{8'b01111110,
+												8'b01111110,
+												8'b01111110,
+												8'b01111110,
+												8'b01111110,
+												8'b01111110,
+												8'b01111110,
+												8'b01111110};
+parameter logic [7:0] norhy [7:0] = '{8'b11111111,
+												  8'b11111111,
+												  8'b11111111,
+												  8'b11111111,
+												  8'b11111111,
+												  8'b11111111,
+												  8'b11111111,
+												  8'b11111111};
+initial
+	begin
+		cnt=0;
+	end
+always@(posedge clk1000)
+	begin
+		if(cnt>=7)
+			cnt<=0;
+		else
+			cnt<=cnt+1;
+		comm<={cnt,1'b1};
+		if(changefor1==0)
+			ledb<=rhy[cnt];
+		else
+			ledb<=rhy[cnt];
+	end
+always@(posedge clk1)
+	begin
+		changefor1<=~changefor1;
+	end
+endmodule
+/////
+module freq1(input clk, output reg clk1);//clock 1hz
+	reg [24:0] Count;
+	always @(posedge clk)
+	begin
+		if(Count > 25000000)
+		begin
+			Count <= 25'b0;
+			clk1 <= ~clk1;
+		end
+		else
+			Count <= Count + 1'b1;
+	end
+endmodule
+/////
+module freq1000(input clk, output reg clk1000);//clock 1000hz
+	reg [24:0] Count;
+	always @(posedge clk)
+	begin
+		if(Count > 25000)
+		begin
+			Count <= 25'b0;
+			clk1 <= ~clk1;
+		end
+		else
+			Count <= Count + 1'b1;
+	end
+endmodule
